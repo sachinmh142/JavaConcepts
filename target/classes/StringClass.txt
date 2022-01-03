@@ -1,0 +1,344 @@
+String Classes  in java
+(When a variable is declared with final keyword, its value can�t be modified : final)
+
+Java has 3 types of String classes:
+(a) String
+(b) StringBuffer
+(c) StringBuilder
+
+--------------------------------------------------------------
+String is a immutable. It creates multiple objects.
+
+Q:Different ways of creating object to String class:
+
+String str1 = "SG Testing";literals //string pool OR String constant pool
+
+String str1 = new String("SG Testing"); //Heap memory
+
+String str1 = new String("SG Testing"); //Heap memory
+String str2 = str1;
+
+String str1 = new String("SG Testing"); //Heap memory
+String str2 = new String(str1);
+-----------------------------------
+String methods:
+
+toLowerCase
+toUpperCase
+length
+subString
+subSequence
+charAt
+startsWith
+endsWith
+contains
+indexOf
+lastIndexOf
+trim
+concat
+replace
+replaceFirst
+replaceAll
+split
+equals
+equalsIgnoreCase
+contentEquals
+compareTo
+compareToIgnoreCase
+toCharArray
+isEmpty
+valueOf
+toString
+join
+isEmpty()
+-----------------------------
+Q: Can you prove String is immutable?
+Ans: Yes
+String str1 = "SG Testing";
+String str2 = str1.concat(" Institute");
+System.out.println(str1);
+System.out.println(str2);
+----------------------------------------
+----------------------------------------
+toLowerCase(): It is used to convert the given input string into lower case.
+
+Arguments: NA
+
+Return Type: String
+----------------------------------------
+
+toUpperCase():
+   It is used to convert the given input string into upper case.
+
+Arguments: NA
+
+Return Type: String
+---------------------------------------
+length():
+  It gives number of characters present in the given string.
+
+Arguments: NA
+
+Return Type: int
+---------------------------------------
+subString():
+   It is a overloaded method. It is used to extract character OR characters from the given string.
+
+Arguments:
+substr(int startIndex)
+substr(int startIndex, int endIndex)
+
+Return Type: String.
+---------------------------------------
+subSequence():
+   It is used to extract character OR characters from the given string.
+
+Arguments: 
+subSequence(int startIndex, int endIndex)
+
+Return Type: charSequence
+---------------------------------------
+charAt();
+   It returns the character corresponding to the given index/position.
+
+Arguments:
+index/number
+
+Return Type: character
+
+------------------------------------
+startsWith(): It is used to search the value present in start position.
+
+endsWith(): It is used to search the value present in end position.
+
+contains(): It is used to search the value present in start, middle & end position.
+It acts as startsWith(), endsWith() & contains()
+
+Arguments:
+String
+
+Return type: boolean
+--------------------------------------
+indexOf():
+  It is also used for searching the given string in the main string. It is a overloaded method.
+
+Arguments:
+indexOf(char)
+indexOf(char, intStartIndex)
+indexOf(String)
+indexOf(String, intStartIndex)
+
+return type: int
+-1 -> Search is not found
+>=0 -> Search is found. Hence it gives the position of the match
+--------------------------------------
+lastIndexOf():
+ It is also used for searching the given string in the main string. It is a overloaded method.
+
+Arguments:
+lastIndexOf(char)
+lastIndexOf(char, intStartIndex)
+lastIndexOf(String)
+lastIndexOf(String, intStartIndex)
+
+return type: int
+-1 -> Search is not found
+>=0 -> Search is found. Hence it gives the position of the match
+---------------------------------------
+trim();
+   It is used to remove both left & right side spaces from the string.
+
+Argumets: NA
+
+Return Type: String
+
+---------------------------------------
+concat();
+   It is used to append the string.
+
+Argumets: String
+
+Return Type: String
+-------------------------------------
+replace(); It is used to replace all the matches with replacement string/character
+
+replaceFirst(); It is used to replace the first match with replacement string/character
+  
+replaceAll(); It is used to replace all the matches with replacement string/character
+
+
+Arguments: String, String
+
+Return Type: String
+----------------------------------------
+split(): it is used to convert the string into array.
+
+Arguments:
+split(delimeter)
+split(delimeter, limit)
+   
+return type:
+String []
+-----------------------------------
+equals(): It is used to compare values. It is case sensitive.
+
+equalsIgnoreCase(): It is used to compare values. It is non-case sensitive
+
+contentEquals(): It is used to compare values. It is case sensitive
+
+Arguments:
+equals(String)
+equalsIgnoreCase(String)
+contentEquals(charSequence)
+
+Return type: boolean
+----------------------------------
+
+compareTo(): It is used to compare values. It is case sensitive.
+
+compareToIgnoreCase(): It is used to compare values. It is non-case sensitive
+
+Arguments: String
+
+Return Type: int
+0 = Both are same
+32 = first string is bigger than second string
+-32 = first string is smaller than second string
+----------------------------------------
+
+toCharArray(): It is used to convert the String into character array
+
+Arguments: NA
+
+Return Type:
+char[]
+----------------------------------
+
+isEmpty(): to check the string is empty or not.
+
+Arguments: NA
+return type: boolean
+---------------------------------
+
+valueOf(): it is used to convert all datatypes into String. It is a static method
+
+Arguments: all datatypes
+
+Return Type: String
+----------------------------------
+
+toString(): It gives String representation of the object. 
+Which means it converts objects to string by overriding the class behaviour.
+
+Arguments: NA
+
+Return type: String
+---------------------------------
+
+join(): It is used to join the strings using required delimeter. It is a static method
+
+arguments: charsequence, charsequence
+
+return type: String
+
+==========================
+==========================
+
+StringBuilder: It is also a one of the String class in java.
+
+StringBuilder str = new StringBuilder("SG Testing");
+
+StringBuilder str1 = new StringBuilder("SG Testing");
+StringBuilder str2 = str1
+
+StringBuilder str1 = new StringBuilder("SG Testing");
+StringBuilder str2 = new StringBuilder(str1);
+
+Note: StringBuilder class is not compatible with either String class OR StringBuffer class.
+-------------------------------
+append
+delete
+deleteCharAt
+insert
+reverse
+----------------------
+append(): It is used to modify the StringBuilder.
+
+Arguments:
+overloaded with all datatypes
+
+Return Type:
+StringBuilder
+--------------------
+delete(): It is used to delete the range of characters from the given StringBuilder
+
+Arguments:
+start, end
+
+Return Type:
+StringBuilder
+-----------------------
+deleteCharAt(): It is used to delete the specific character based on the index specified
+
+Arguments:
+index
+
+Return Type:
+StringBuilder
+----------------------
+insert(): It is used to insert the character OR String based on the index specified.
+
+Arguments:
+index, value
+
+Return Type:
+StringBuilder
+----------------------
+reverse(): It will reverse the given value
+
+Arguments:
+NA
+
+Return Type:
+StringBuilder
+===============================
+
+StringBuffer:
+==============
+append
+delete
+deleteCharAt
+insert
+reverse
+
+StringBuffer str = new StringBuffer("SG Testing");
+
+StringBuffer str1 = new StringBuffer("SG Testing");
+StringBuffer str2 = str1
+
+StringBuffer str1 = new StringBuffer("SG Testing");
+StringBuffer str2 = new StringBuffer(str1);
+
+Note: StringBuffer class is not compatible with either String class OR StringBuilder class.
+==========================
+
+
+Q: Difference between String, StringBuffer & StringBuilder?
+Ans:
+String:
+1. Immutable
+2. Synchronized and thread safe
+3. Creates multiple objects
+4. Its slow compare to StringBuilder
+---------------------------------------------------------
+StringBuffer:
+1. Non immutable
+2. Synchronized and thread safe
+3. It creates one object and uses the same
+4. Its slow compare to StringBuilder
+---------------------------------------------------------
+StringBuilder
+1. Non immutable
+2. Non Synchronized and non thread safe
+3. It creates one object and uses the same
+4. Its fast compare to String and StringBuffer

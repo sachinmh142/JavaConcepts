@@ -1,0 +1,61 @@
+POI: It is a external api developed by Apache organization.
+It is used for excel operations.
+
+POI stands for "Poor Obfuscation Implementation" 
+
+POI object model:
+---------------
+
+WorkBook
+    | (wb)     
+    |	       wb = WorkBookFactory.create()
+    V			wb = new XSSFWorkBook();
+Sheet
+    | (sh)     sh = wb.createSheet(<SheetName>);
+    |          sh = wb.getSheet(<SheetName>);
+    V
+  Row
+    | (row)    row = sh.createRow(<number>);
+    |           row = sh.getRow(<number>);
+    V
+  Cell
+    | (cell)    cell = row.createCell(<number>);
+    |           cell = row.getCell(<number>);
+    V
+Once cell object is created, its used either for 
+ (a) Reading
+ (b) Writing
+
+Note: The WorkBook, Sheet, Row & Cell are the interfaces present in POI.
+
+----------------------------
+Q: How to download & setup poi in eclipse?
+(1). Go to apache website (https://poi.apache.org/download.html) & download the poi zip file which contains all the .jar files
+  (a) go to download-> select Binary Distribution-> click on the <poi_version>.zip file->select the suitable mirror.
+   A <poi_version>.zip file will be downloded.
+
+(2). Extract the .zip file. You will get following imp dir's
+     -lib: you can exclude junit-4.12.jar, log4j-1.2.17.jar
+     -ooxml-lib
+     -<root dir>
+(3) Copy the .jar files from all above locations & put it in eclipse standard folder structure.
+
+(4) Set the build path for all the poi jars which are in eclipse folder. Eclipse can only execute those jars which are associated in build path.
+
+-------------------------
+.xls - HSSF (Horrible Spread Sheet Format)
+.xlsx - XSSF (Xml Spread Sheet Format)
+------------------
+
+
+Q: Create a new excel sheet & write to it?
+Q: How to read from the existing excel sheet?
+Q: How to copy from one sheet to another sheet?
+Q: How to format the data in excel file for reading?
+Q: Excel with CityName & PIN columns. WAP to get the PIN based on the    CityName?
+Q: Find how many sheets are present in the workbook?
+Q: How to delete the sheets?
+Q: Excel with 3 sheets. WAP to search the value from all the sheets?
+Q: Create a multiple blank excel Files?
+Q: A directory with 7 excel files. Rename them to Weekday names?
+
