@@ -1,0 +1,121 @@
+File System:
+
+It belongs to the package java.io
+It is mainly used to perform file & directory related operations.
+
+Classes in java.io:
+1. File
+It is used for file & Directory operations which are as follows:
+
+
+Q: How to create object to the File class for file:
+File f1 = new File("C:\\SG\\Sample.txt");
+
+File f1 = new File("C:\\SG", "Sample.txt");
+
+File f1 = new File("C:\\SG\\Sample.txt");
+File f2 = f1;
+
+File f1 = new File("C:\\SG\\Sample.txt");
+File f2 = new File(f1.toString());
+
+
+I. File operations
+(a) createNewFile(): to create a new blank file. returns boolean
+(b) renameTo(): to rename files OR to move (Cut & paste) files.returns boolean
+(c) delete(): to delete the files which returns boolean
+(d) deleteOnExit(): to delete the files which is void
+(e) File attributes: to use all the file attributes
+
+
+                most commonly used methods : File Attributes
+                //getMethods : getFreeSpace , getAbsolutePath ,  getParent , getName , getTotalSpace
+				//can methods : canWrite , canRead , canExecute
+				//is : isDirectory , isFile  , isHidden , exists
+				//set : setWritable , setReadOnly
+
+
+
+(f) File collections: to work with collection of files.how many files are there in folder
+
+         we use :
+         
+         list() and listFiles() methods .
+         
+         list() : returns String
+         
+         listFiles() : Files(object)
+
+Q: How to create object to the File class for Directory:
+File f1 = new File("C:\SG\Sample");
+
+File f1 = new File("C:\\SG\\Sample");
+File f2 = f1;
+
+File f1 = new File("C:\\SG\\Sample");
+File f2 = new File(f1.toString());
+
+
+II. directory Operations
+(a) mkDir(): to create a blank directory. Returns boolean
+(b) mkDirs(): to create a nested directories. Returns boolean
+(c) renameTo(): to rename OR to move the directories. Returns boolean
+(d) delete(): to delete the directory which returns boolean
+(e) deleteOnExit(): to delete directory which is void
+(f) Directory attributes: to use all the directory attributes
+(g) Directory collections: to work with collection of directories.
+
+Note: using File class we can't perform read & write operations bcoz
+ File class is not a Stream object.
+========================================
+
+Stream classes in File System for read & write purpose:
+2 types of stream classes:
+1. byte Stream classes
+2. character stream classes
+
+(i) byte stream classes
+   (a) FileInputStream: Its used for reading purpose. 
+   It reads the file content in the form of int & byte.
+
+   (b) FileOutputStream: Its used for writing purpose. 
+   It writes to the file in the form of int, byte
+
+
+
+(ii) character stream classes
+   (a) FileReader: Its used for reading purpose. 
+   It reads the file content in the form of int, char ,& String
+
+   (b) FileWriter: Its used for writing purpose. 
+   It writes to the file in the form of int, char & String
+   
+******************************************************************************
+  (c) BufferedReader: Its used for reading purpose. 
+     It reads the file content in the form of int, char, String (line by line)
+
+    BufferedReader accepts FileReader as a input.
+
+  (d) BufferedWriter: Its used for writing purpose. It writes the content to the file in the form of int, char, String & newLine.
+
+   BufferedWriter accepts FileWriter as a input.
+===================================================================
+Q: How to find how many files & directories present?
+Q: Find how many lines in a given text file?
+Q: Compare 2 text files?
+Q: Revv ad only alternative lines from the file?
+Q: Read from the file & write to another file in reverse order
+Q: Read from the file & store in the array.
+Q: A directory contains multiple files delete only .txt files?
+Q: A directory contains multiple files rename only .xlsx files?
+Q: A directory contains multiple files rename only .txt files?
+Q: A directory with 7 files, rename them to weekday names?
+Q: A directory contains multiple files find how many .txt, .xlsx & .docx files present?
+Q: File contains some content. Find how many lines, words & characters are present?
+Q: Create nested Directories without using .mkDirs() method?
+Q: Read Nested Directories using recursive?
+Q: Difference between FileInputStream & FileReader
+Q: There is a File with Sample.txt. Verify that the file is present & rename it to AAAA.txt?
+Q: create 5 excel files?
+Q: Difference Between FileInputStream & FileReader & BufferedReader?
+Q: Difference between FileoutputStrean & FileWriter & BufferedWriter?
